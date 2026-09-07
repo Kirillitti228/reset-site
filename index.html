@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RESET</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background">
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+</div>
+
+
+<!-- ================= REGISTRATION ================= -->
+
+<section id="registerScreen" class="screen">
+
+    <div class="auth-card">
+
+        <div class="logo-big">
+            R
+        </div>
+
+        <div class="small-title">
+            RESET
+        </div>
+
+        <h1>
+            Take back<br>
+            <span>control.</span>
+        </h1>
+
+        <p class="description">
+            Track your progress and leave bad habits behind.
+        </p>
+
+        <input
+            id="usernameInput"
+            type="text"
+            placeholder="Your name"
+            maxlength="25"
+        >
+
+        <input
+            id="emailInput"
+            type="email"
+            placeholder="Email"
+        >
+
+        <input
+            id="passwordInput"
+            type="password"
+            placeholder="Password"
+        >
+
+        <button
+            id="registerBtn"
+            class="main-button"
+        >
+            Create account
+        </button>
+
+        <p class="login-text">
+            Your data is saved locally in this browser.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APP ================= -->
+
+<section id="appScreen" class="screen hidden">
+
+    <div class="app">
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="logo">
+                    R
+                </div>
+
+                <span>
+                    RESET
+                </span>
+
+            </div>
+
+
+            <div class="user-area">
+
+                <span id="userName">
+                    User
+                </span>
+
+                <button
+                    id="logoutBtn"
+                    class="logout"
+                >
+                    Log out
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- EMPTY STATE -->
+
+        <section
+            id="emptyState"
+            class="empty-state"
+        >
+
+            <div class="empty-icon">
+                +
+            </div>
+
+            <p class="eyebrow">
+                YOUR HABITS
+            </p>
+
+            <h1>
+                No habits yet.
+            </h1>
+
+            <p>
+                Start your journey by adding<br>
+                the habit you want to leave behind.
+            </p>
+
+            <button
+                id="addHabitBtn"
+                class="main-button"
+            >
+                + Add habit
+            </button>
+
+        </section>
+
+
+        <!-- HABITS -->
+
+        <section
+            id="habitsSection"
+            class="habits-section hidden"
+        >
+
+            <div class="page-heading">
+
+                <div>
+                    <p class="eyebrow">
+                        YOUR JOURNEY
+                    </p>
+
+                    <h1>
+                        Keep going.
+                    </h1>
+                </div>
+
+                <button
+                    id="addHabitBtn2"
+                    class="add-small"
+                >
+                    + Add
+                </button>
+
+            </div>
+
+
+            <div
+                id="habitsList"
+                class="habits-list"
+            ></div>
+
+        </section>
+
+
+        <footer>
+            RESET • Your progress is saved automatically
+        </footer>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ADD HABIT ================= -->
+
+<section
+    id="habitScreen"
+    class="screen hidden"
+>
+
+    <div class="habit-card">
+
+        <button
+            id="backBtn"
+            class="back-button"
+        >
+            ← Back
+        </button>
+
+
+        <div class="habit-header">
+
+            <p class="eyebrow">
+                NEW JOURNEY
+            </p>
+
+            <h1>
+                Leave it<br>
+                <span>behind.</span>
+            </h1>
+
+            <p>
+                Tell us what habit you're breaking and when you stopped.
+            </p>
+
+        </div>
+
+
+        <label>
+            Habit name
+        </label>
+
+        <input
+            id="habitNameInput"
+            type="text"
+            placeholder="For example: Smoking"
+            maxlength="40"
+        >
+
+
+        <label>
+            When did you stop?
+        </label>
+
+        <input
+            id="habitDateInput"
+            type="datetime-local"
+        >
+
+
+        <div class="date-hint">
+            The timer will start from this exact moment.
+        </div>
+
+
+        <button
+            id="finishHabitBtn"
+            class="main-button"
+        >
+            Done — start my journey
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MODAL ================= -->
+
+<div
+    id="modal"
+    class="modal hidden"
+>
+
+    <div class="modal-card">
+
+        <h2>
+            Delete habit?
+        </h2>
+
+        <p>
+            This will remove this habit and its timer.
+        </p>
+
+        <div class="modal-buttons">
+
+            <button
+                id="cancelDelete"
+                class="cancel-button"
+            >
+                Cancel
+            </button>
+
+            <button
+                id="confirmDelete"
+                class="delete-button"
+            >
+                Delete
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
