@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RESET</title>
+    <title>RESET — Break Bad Habits</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,9 +25,9 @@
 </div>
 
 
-<!-- ================= REGISTRATION ================= -->
+<!-- ================= AUTH SCREEN ================= -->
 
-<section id="registerScreen" class="screen">
+<section id="authScreen" class="screen">
 
     <div class="auth-card">
 
@@ -35,43 +39,144 @@
             RESET
         </div>
 
-        <h1>
-            Take back<br>
-            <span>control.</span>
-        </h1>
 
-        <p class="description">
-            Track your progress and leave bad habits behind.
-        </p>
+        <!-- AUTH TABS -->
 
-        <input
-            id="usernameInput"
-            type="text"
-            placeholder="Your name"
-            maxlength="25"
+        <div class="auth-tabs">
+
+            <button
+                id="loginTab"
+                class="auth-tab active"
+            >
+                Log in
+            </button>
+
+            <button
+                id="registerTab"
+                class="auth-tab"
+            >
+                Create account
+            </button>
+
+        </div>
+
+
+        <!-- ================= LOGIN ================= -->
+
+        <div id="loginForm">
+
+            <h1>
+                Welcome
+                <br>
+                <span>back.</span>
+            </h1>
+
+            <p class="description">
+                Continue your journey and keep your streak alive.
+            </p>
+
+
+            <input
+                id="loginEmail"
+                type="email"
+                placeholder="Email"
+                autocomplete="email"
+            >
+
+
+            <input
+                id="loginPassword"
+                type="password"
+                placeholder="Password"
+                autocomplete="current-password"
+            >
+
+
+            <button
+                id="loginBtn"
+                class="main-button"
+            >
+                Log in
+            </button>
+
+
+            <p
+                id="loginMessage"
+                class="message"
+            ></p>
+
+        </div>
+
+
+        <!-- ================= REGISTER ================= -->
+
+        <div
+            id="registerForm"
+            class="hidden"
         >
 
-        <input
-            id="emailInput"
-            type="email"
-            placeholder="Email"
-        >
+            <h1>
+                Take back
+                <br>
+                <span>control.</span>
+            </h1>
 
-        <input
-            id="passwordInput"
-            type="password"
-            placeholder="Password"
-        >
+            <p class="description">
+                Create an account and start leaving bad habits behind.
+            </p>
 
-        <button
-            id="registerBtn"
-            class="main-button"
-        >
-            Create account
-        </button>
+
+            <input
+                id="registerName"
+                type="text"
+                placeholder="Your name"
+                maxlength="25"
+                autocomplete="name"
+            >
+
+
+            <input
+                id="registerEmail"
+                type="email"
+                placeholder="Email"
+                autocomplete="email"
+            >
+
+
+            <input
+                id="registerPassword"
+                type="password"
+                placeholder="Password"
+                autocomplete="new-password"
+            >
+
+
+            <input
+                id="registerPassword2"
+                type="password"
+                placeholder="Repeat password"
+                autocomplete="new-password"
+            >
+
+
+            <button
+                id="registerBtn"
+                class="main-button"
+            >
+                Create account
+            </button>
+
+
+            <p
+                id="registerMessage"
+                class="message"
+            ></p>
+
+        </div>
+
 
         <p class="login-text">
-            Your data is saved locally in this browser.
+            Your account is saved in this browser.
         </p>
 
     </div>
@@ -79,11 +184,18 @@
 </section>
 
 
-<!-- ================= APP ================= -->
 
-<section id="appScreen" class="screen hidden">
+<!-- ================= MAIN APP ================= -->
+
+<section
+    id="appScreen"
+    class="screen hidden"
+>
 
     <div class="app">
+
+
+        <!-- TOP BAR -->
 
         <header class="topbar">
 
@@ -118,7 +230,8 @@
         </header>
 
 
-        <!-- EMPTY STATE -->
+
+        <!-- ================= EMPTY STATE ================= -->
 
         <section
             id="emptyState"
@@ -138,7 +251,8 @@
             </h1>
 
             <p>
-                Start your journey by adding<br>
+                Start your journey by adding
+                <br>
                 the habit you want to leave behind.
             </p>
 
@@ -152,7 +266,8 @@
         </section>
 
 
-        <!-- HABITS -->
+
+        <!-- ================= HABITS ================= -->
 
         <section
             id="habitsSection"
@@ -162,6 +277,7 @@
             <div class="page-heading">
 
                 <div>
+
                     <p class="eyebrow">
                         YOUR JOURNEY
                     </p>
@@ -169,7 +285,9 @@
                     <h1>
                         Keep going.
                     </h1>
+
                 </div>
+
 
                 <button
                     id="addHabitBtn2"
@@ -189,6 +307,7 @@
         </section>
 
 
+
         <footer>
             RESET • Your progress is saved automatically
         </footer>
@@ -198,7 +317,8 @@
 </section>
 
 
-<!-- ================= ADD HABIT ================= -->
+
+<!-- ================= ADD HABIT SCREEN ================= -->
 
 <section
     id="habitScreen"
@@ -206,6 +326,7 @@
 >
 
     <div class="habit-card">
+
 
         <button
             id="backBtn"
@@ -222,12 +343,14 @@
             </p>
 
             <h1>
-                Leave it<br>
+                Leave it
+                <br>
                 <span>behind.</span>
             </h1>
 
             <p>
-                Tell us what habit you're breaking and when you stopped.
+                Tell us what habit you're breaking
+                and when you stopped.
             </p>
 
         </div>
@@ -272,7 +395,8 @@
 </section>
 
 
-<!-- ================= MODAL ================= -->
+
+<!-- ================= DELETE MODAL ================= -->
 
 <div
     id="modal"
@@ -288,6 +412,7 @@
         <p>
             This will remove this habit and its timer.
         </p>
+
 
         <div class="modal-buttons">
 
@@ -310,6 +435,7 @@
     </div>
 
 </div>
+
 
 
 <script src="script.js"></script>

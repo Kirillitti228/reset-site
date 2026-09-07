@@ -2,19 +2,37 @@
     box-sizing: border-box;
 }
 
+
 :root {
+
     --bg: #080a0f;
+
     --card: #10141c;
+
     --card2: #0d1118;
+
     --border: rgba(255,255,255,0.08);
+
     --text: #f5f5f7;
+
     --muted: #858c9b;
+
     --purple: #7c5cff;
+
     --green: #00d4a8;
+
     --red: #ff5c6c;
+
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
+
     margin: 0;
 
     min-height: 100vh;
@@ -24,25 +42,37 @@ body {
     color: var(--text);
 
     font-family: Inter, Arial, sans-serif;
+
 }
+
 
 button,
 input {
+
     font-family: inherit;
+
 }
+
 
 button {
+
     cursor: pointer;
+
 }
 
+
 .hidden {
+
     display: none !important;
+
 }
+
 
 
 /* ================= BACKGROUND ================= */
 
 .background {
+
     position: fixed;
 
     inset: 0;
@@ -52,12 +82,16 @@ button {
     pointer-events: none;
 
     z-index: -1;
+
 }
 
+
 .glow {
+
     position: absolute;
 
     width: 500px;
+
     height: 500px;
 
     border-radius: 50%;
@@ -65,38 +99,58 @@ button {
     filter: blur(140px);
 
     opacity: .12;
+
 }
 
+
 .glow1 {
+
     background: #7c5cff;
 
     top: -250px;
+
     right: -150px;
+
 }
 
+
 .glow2 {
+
     background: #00d4a8;
 
     bottom: -300px;
+
     left: -200px;
+
 }
+
 
 
 /* ================= COMMON ================= */
 
 .screen {
+
     min-height: 100vh;
+
 }
 
+
 .app {
-    width: min(950px, calc(100% - 32px));
+
+    width: min(
+        950px,
+        calc(100% - 32px)
+    );
 
     margin: auto;
 
     padding: 25px 0 60px;
+
 }
 
+
 .eyebrow {
+
     margin: 0 0 10px;
 
     color: #737b8b;
@@ -106,9 +160,12 @@ button {
     font-weight: 800;
 
     letter-spacing: 2.5px;
+
 }
 
+
 .main-button {
+
     width: 100%;
 
     border: 0;
@@ -126,19 +183,26 @@ button {
     font-weight: 800;
 
     transition: .2s;
+
 }
 
+
 .main-button:hover {
+
     transform: translateY(-2px);
 
     box-shadow:
-        0 15px 35px rgba(255,255,255,.08);
+        0 15px 35px
+        rgba(255,255,255,.08);
+
 }
 
 
-/* ================= REGISTRATION ================= */
 
-#registerScreen {
+/* ================= AUTH ================= */
+
+#authScreen {
+
     display: flex;
 
     justify-content: center;
@@ -146,21 +210,32 @@ button {
     align-items: center;
 
     padding: 30px;
+
 }
 
+
 .auth-card {
-    width: min(430px, 100%);
+
+    width: min(
+        430px,
+        100%
+    );
 
     text-align: center;
 
     padding: 35px;
+
 }
 
+
 .logo-big {
+
     width: 64px;
+
     height: 64px;
 
-    margin: 0 auto 15px;
+    margin:
+        0 auto 15px;
 
     display: grid;
 
@@ -180,10 +255,14 @@ button {
     font-weight: 800;
 
     box-shadow:
-        0 15px 50px rgba(124,92,255,.25);
+        0 15px 50px
+        rgba(124,92,255,.25);
+
 }
 
+
 .small-title {
+
     color: #777e8d;
 
     font-size: 11px;
@@ -191,55 +270,148 @@ button {
     font-weight: 800;
 
     letter-spacing: 3px;
+
 }
 
-.auth-card h1 {
-    margin: 28px 0 15px;
 
-    font-size: clamp(43px, 8vw, 64px);
+/* AUTH TABS */
+
+.auth-tabs {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 4px;
+
+    background: #ffffff06;
+
+    border: 1px solid #ffffff10;
+
+    padding: 4px;
+
+    border-radius: 12px;
+
+    margin:
+        30px 0 25px;
+
+}
+
+
+.auth-tab {
+
+    border: 0;
+
+    border-radius: 9px;
+
+    padding: 11px;
+
+    background: transparent;
+
+    color: #707887;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.auth-tab.active {
+
+    background: #ffffff10;
+
+    color: white;
+
+}
+
+
+.auth-card h1 {
+
+    margin:
+        0 0 15px;
+
+    font-size:
+        clamp(
+            43px,
+            8vw,
+            60px
+        );
 
     line-height: .95;
 
     letter-spacing: -3px;
+
 }
+
 
 .auth-card h1 span {
+
     color: #7d8491;
+
 }
 
+
 .description {
+
     color: var(--muted);
 
     font-size: 14px;
 
     line-height: 1.6;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+
 }
+
 
 .auth-card input {
+
     margin-bottom: 10px;
+
 }
 
+
 .login-text {
+
     margin-top: 17px;
 
     color: #4e5562;
 
     font-size: 10px;
+
 }
+
+
+.message {
+
+    min-height: 16px;
+
+    margin:
+        10px 0 0;
+
+    color: var(--red);
+
+    font-size: 11px;
+
+}
+
 
 
 /* ================= INPUTS ================= */
 
 input {
+
     width: 100%;
 
     padding: 15px;
 
     border-radius: 13px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        var(--border);
 
     background: #0e1219;
 
@@ -250,23 +422,34 @@ input {
     font-size: 13px;
 
     transition: .2s;
+
 }
+
 
 input::placeholder {
+
     color: #555c69;
+
 }
+
 
 input:focus {
-    border-color: #7c5cff88;
+
+    border-color:
+        #7c5cff88;
 
     box-shadow:
-        0 0 0 3px #7c5cff12;
+        0 0 0 3px
+        #7c5cff12;
+
 }
+
 
 
 /* ================= TOPBAR ================= */
 
 .topbar {
+
     display: flex;
 
     justify-content: space-between;
@@ -274,9 +457,12 @@ input:focus {
     align-items: center;
 
     margin-bottom: 70px;
+
 }
 
+
 .brand {
+
     display: flex;
 
     align-items: center;
@@ -288,10 +474,14 @@ input:focus {
     font-weight: 800;
 
     letter-spacing: 2px;
+
 }
 
+
 .logo {
+
     width: 35px;
+
     height: 35px;
 
     display: grid;
@@ -308,9 +498,12 @@ input:focus {
         );
 
     font-weight: 800;
+
 }
 
+
 .user-area {
+
     display: flex;
 
     align-items: center;
@@ -320,10 +513,15 @@ input:focus {
     color: #858c9b;
 
     font-size: 12px;
+
 }
 
+
 .logout {
-    border: 1px solid var(--border);
+
+    border:
+        1px solid
+        var(--border);
 
     background: #ffffff05;
 
@@ -334,22 +532,32 @@ input:focus {
     padding: 8px 12px;
 
     font-size: 10px;
+
 }
 
 
-/* ================= EMPTY ================= */
+
+/* ================= EMPTY STATE ================= */
 
 .empty-state {
+
     text-align: center;
 
-    padding: 80px 20px 120px;
+    padding:
+        80px 20px
+        120px;
+
 }
 
+
 .empty-icon {
+
     width: 80px;
+
     height: 80px;
 
-    margin: 0 auto 25px;
+    margin:
+        0 auto 25px;
 
     display: grid;
 
@@ -357,43 +565,59 @@ input:focus {
 
     border-radius: 24px;
 
-    border: 1px dashed #ffffff1c;
+    border:
+        1px dashed
+        #ffffff1c;
 
     color: #747b8a;
 
     font-size: 35px;
 
     background: #ffffff03;
+
 }
 
+
 .empty-state h1 {
+
     margin: 0;
 
     font-size: 38px;
 
     letter-spacing: -2px;
+
 }
 
+
 .empty-state p:not(.eyebrow) {
+
     color: var(--muted);
 
     line-height: 1.7;
 
     font-size: 13px;
 
-    margin: 14px 0 30px;
+    margin:
+        14px 0 30px;
+
 }
+
 
 .empty-state .main-button {
+
     width: auto;
 
-    padding: 14px 28px;
+    padding:
+        14px 28px;
+
 }
+
 
 
 /* ================= HABITS ================= */
 
 .page-heading {
+
     display: flex;
 
     justify-content: space-between;
@@ -401,42 +625,57 @@ input:focus {
     align-items: end;
 
     margin-bottom: 25px;
+
 }
 
+
 .page-heading h1 {
+
     margin: 0;
 
     font-size: 38px;
 
     letter-spacing: -2px;
+
 }
 
+
 .add-small {
-    border: 1px solid #ffffff15;
+
+    border:
+        1px solid
+        #ffffff15;
 
     background: #ffffff08;
 
     color: white;
 
-    padding: 11px 16px;
+    padding:
+        11px 16px;
 
     border-radius: 11px;
 
     font-size: 12px;
 
     font-weight: 700;
+
 }
 
+
 .habits-list {
+
     display: grid;
 
     gap: 15px;
+
 }
+
 
 
 /* ================= HABIT CARD ================= */
 
 .habit-item {
+
     position: relative;
 
     overflow: hidden;
@@ -448,86 +687,115 @@ input:focus {
             #0d1118
         );
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        var(--border);
 
     border-radius: 24px;
 
     padding: 28px;
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,.25);
+        0 25px 70px
+        rgba(0,0,0,.25);
+
 }
 
+
 .habit-item::before {
+
     content: "";
 
     position: absolute;
 
     width: 250px;
+
     height: 250px;
 
-    background: #7c5cff;
+    background:
+        var(--purple);
 
     opacity: .05;
 
     filter: blur(100px);
 
     top: -130px;
+
     right: -70px;
+
 }
 
+
 .habit-top {
+
     display: flex;
 
     justify-content: space-between;
 
     align-items: start;
+
 }
 
+
 .habit-name {
+
     margin: 0;
 
     font-size: 23px;
 
     letter-spacing: -.7px;
+
 }
 
+
 .habit-date {
+
     margin-top: 7px;
 
     color: #656d7b;
 
     font-size: 10px;
+
 }
 
+
 .delete-habit {
+
     border: 0;
 
     background: transparent;
 
     color: #555c69;
 
-    font-size: 17px;
+    font-size: 20px;
+
 }
+
 
 .delete-habit:hover {
+
     color: var(--red);
+
 }
 
+
 .habit-timer {
+
     margin-top: 30px;
 
-    font-size: clamp(
-        38px,
-        8vw,
-        67px
-    );
+    font-size:
+        clamp(
+            38px,
+            8vw,
+            67px
+        );
 
     font-weight: 800;
 
     letter-spacing: -3px;
 
-    font-variant-numeric: tabular-nums;
+    font-variant-numeric:
+        tabular-nums;
 
     background:
         linear-gradient(
@@ -541,16 +809,20 @@ input:focus {
     background-clip: text;
 
     color: transparent;
+
 }
 
+
 .timer-labels {
+
     display: flex;
 
-    gap: clamp(
-        22px,
-        6vw,
-        58px
-    );
+    gap:
+        clamp(
+            22px,
+            6vw,
+            58px
+        );
 
     color: #4e5664;
 
@@ -561,13 +833,19 @@ input:focus {
     letter-spacing: 1.5px;
 
     margin-top: 2px;
+
 }
+
 
 .habit-progress {
+
     margin-top: 28px;
+
 }
 
+
 .progress-top {
+
     display: flex;
 
     justify-content: space-between;
@@ -577,9 +855,12 @@ input:focus {
     font-size: 10px;
 
     margin-bottom: 8px;
+
 }
 
+
 .progress {
+
     width: 100%;
 
     height: 6px;
@@ -589,9 +870,12 @@ input:focus {
     background: #1d222c;
 
     overflow: hidden;
+
 }
 
+
 .progress-bar {
+
     height: 100%;
 
     width: 0;
@@ -605,13 +889,17 @@ input:focus {
             var(--green)
         );
 
-    transition: width .5s;
+    transition:
+        width .5s;
+
 }
+
 
 
 /* ================= ADD HABIT ================= */
 
 #habitScreen {
+
     display: flex;
 
     align-items: center;
@@ -619,10 +907,17 @@ input:focus {
     justify-content: center;
 
     padding: 25px;
+
 }
 
+
 .habit-card {
-    width: min(520px, 100%);
+
+    width:
+        min(
+            520px,
+            100%
+        );
 
     background:
         linear-gradient(
@@ -631,17 +926,23 @@ input:focus {
             #0d1118
         );
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        var(--border);
 
     border-radius: 25px;
 
     padding: 32px;
 
     box-shadow:
-        0 30px 100px rgba(0,0,0,.45);
+        0 30px 100px
+        rgba(0,0,0,.45);
+
 }
 
+
 .back-button {
+
     border: 0;
 
     background: transparent;
@@ -653,23 +954,33 @@ input:focus {
     margin-bottom: 45px;
 
     font-size: 12px;
+
 }
 
+
 .habit-header h1 {
-    margin: 0 0 13px;
+
+    margin:
+        0 0 13px;
 
     font-size: 48px;
 
     line-height: .95;
 
     letter-spacing: -3px;
+
 }
+
 
 .habit-header h1 span {
+
     color: #777e8c;
+
 }
 
+
 .habit-header p:not(.eyebrow) {
+
     color: var(--muted);
 
     font-size: 13px;
@@ -677,9 +988,12 @@ input:focus {
     line-height: 1.6;
 
     margin-bottom: 30px;
+
 }
 
+
 .habit-card label {
+
     display: block;
 
     color: #8c93a1;
@@ -688,21 +1002,29 @@ input:focus {
 
     font-weight: 700;
 
-    margin: 16px 0 8px;
+    margin:
+        16px 0 8px;
+
 }
 
+
 .date-hint {
+
     color: #555d6b;
 
     font-size: 10px;
 
-    margin: 9px 0 25px;
+    margin:
+        9px 0 25px;
+
 }
+
 
 
 /* ================= MODAL ================= */
 
 .modal {
+
     position: fixed;
 
     inset: 0;
@@ -715,34 +1037,54 @@ input:focus {
 
     padding: 20px;
 
-    background: rgba(0,0,0,.75);
+    background:
+        rgba(0,0,0,.75);
+
 }
 
+
 .modal-card {
-    width: min(380px, 100%);
+
+    width:
+        min(
+            380px,
+            100%
+        );
 
     background: #121720;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        var(--border);
 
     border-radius: 20px;
 
     padding: 25px;
+
 }
+
 
 .modal-card h2 {
-    margin: 0 0 8px;
+
+    margin:
+        0 0 8px;
+
 }
 
+
 .modal-card p {
+
     color: var(--muted);
 
     font-size: 12px;
 
     line-height: 1.5;
+
 }
 
+
 .modal-buttons {
+
     display: flex;
 
     justify-content: flex-end;
@@ -750,35 +1092,48 @@ input:focus {
     gap: 8px;
 
     margin-top: 22px;
+
 }
+
 
 .cancel-button,
 .delete-button {
+
     border: 0;
 
     border-radius: 10px;
 
-    padding: 11px 17px;
+    padding:
+        11px 17px;
 
     font-weight: 700;
+
 }
 
+
 .cancel-button {
+
     background: #ffffff08;
 
     color: white;
+
 }
 
+
 .delete-button {
+
     background: var(--red);
 
     color: white;
+
 }
+
 
 
 /* ================= FOOTER ================= */
 
 footer {
+
     text-align: center;
 
     color: #424955;
@@ -786,7 +1141,9 @@ footer {
     font-size: 9px;
 
     margin-top: 50px;
+
 }
+
 
 
 /* ================= MOBILE ================= */
@@ -794,56 +1151,102 @@ footer {
 @media (max-width: 600px) {
 
     .app {
-        width: calc(100% - 22px);
+
+        width:
+            calc(100% - 22px);
 
         padding-top: 18px;
+
     }
+
 
     .topbar {
+
         margin-bottom: 40px;
+
     }
+
 
     .user-area {
+
         gap: 7px;
+
     }
+
 
     .user-area > span {
+
         display: none;
+
     }
+
 
     .empty-state {
-        padding: 60px 10px;
+
+        padding:
+            60px 10px;
+
     }
+
 
     .empty-state h1 {
+
         font-size: 32px;
+
     }
 
+
     .habit-card {
+
         padding: 24px;
 
         border-radius: 20px;
+
     }
+
 
     .habit-header h1 {
+
         font-size: 43px;
+
     }
+
 
     .habit-item {
+
         padding: 22px;
+
     }
 
+
     .habit-timer {
+
         font-size: 38px;
 
         letter-spacing: -2px;
+
     }
+
 
     .timer-labels {
+
         gap: 19px;
+
     }
 
+
     .page-heading h1 {
+
         font-size: 32px;
+
     }
+
+
+    .auth-card {
+
+        padding:
+            20px 5px;
+
+    }
+
 }
